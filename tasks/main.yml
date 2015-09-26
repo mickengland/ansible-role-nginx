@@ -29,3 +29,4 @@
   service: name=nginx state=started enabled=yes
 
 - include: vhosts.yml
+- include: lbs.yml

@@ -1,0 +1,8 @@
+---
+- name: Add lbs config.
+  template:
+    src: nginx-lb.conf.j2
+    dest: "{{ nginx_vhost_path }}/lbs.conf"
+    mode: 0644
+  when: nginx_configure_lb
+  notify: restart nginx
