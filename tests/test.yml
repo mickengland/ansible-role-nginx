@@ -1,5 +1,8 @@
 ---
-- hosts: localhost
-  remote_user: root
+- name: gather all hosts information
+  hosts: all
+- hosts: web
+  remote_user: mick
+  sudo: yes
   roles:
     - ansible-role-nginx
